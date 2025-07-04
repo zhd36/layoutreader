@@ -16,7 +16,7 @@ deepspeed train.py \
   --model_dir '/workspace/paddlex/Model/layoutreader' \
   --dataset_dir "${DATA_DIR}" \
   --shuffle_probability 1.0 \
-  --bbox_noise_level 0.0 \
+  --bbox_noise_level 0.00 \
   --dataloader_num_workers 1 \
   --deepspeed ds_config.json \
   --per_device_train_batch_size 64 \
@@ -26,7 +26,7 @@ deepspeed train.py \
   --logging_steps 5 \
   --bf16 \
   --seed 42 \
-  --num_train_epochs 400 \
+  --num_train_epochs 50 \
   --learning_rate 5e-5 \
   --warmup_steps 1000 \
   --save_strategy epoch \
